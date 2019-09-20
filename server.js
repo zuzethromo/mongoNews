@@ -7,6 +7,8 @@ let PORT = process.env.PORT || 3000;
 let app = express();
 let router = express.Router();
 
+require("./config/routes")(router);
+
 app.use(express.static(__dirname + "/public"));
 
 app.engine("handlebars", expressHandlebars ({
