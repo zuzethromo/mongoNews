@@ -1,10 +1,9 @@
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-mongoose.connect(MONGODB_URI);
-
 let express = require("express");
 let mongoose = require("mongoose");
 let expressHandlebars = require("express-handlebars");
 let bodyParser = require("body-parser");
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(MONGODB_URI);
 
 let PORT = process.env.PORT || 3000;
 let app = express();
