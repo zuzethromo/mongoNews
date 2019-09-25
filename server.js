@@ -1,3 +1,6 @@
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(MONGODB_URI);
+
 let express = require("express");
 let mongoose = require("mongoose");
 let expressHandlebars = require("express-handlebars");
